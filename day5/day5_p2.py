@@ -72,9 +72,14 @@ def maine():
     seeds = next(f)
     _, seeds = seeds.split(":")
     seeds = seeds.split()
-    for seed in seeds:
-      seed = int(seed)
-      locations.append(seed_to_location(file, seed))
+    seeds = seeds[::-1]
+    while len(seeds) != 0:
+      start_seed = int(seeds.pop())
+      seed_count = int(seeds.pop())
+      current_seed = start_seed
+      for _ in range(seed_count):
+        locations.append(seed_to_location(file, current_seed))
+        current_seed += 1
   small = 0
   for location in locations:
     if small == 0:
