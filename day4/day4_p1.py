@@ -9,12 +9,12 @@ def calc_points(s):
   for num in my_nums:
     if num in winning_nums:
       count += 1
-    
 
   points = 2 ** (count - 1)
   if points < 1:
     return 0
   return points
+
   # return winning_nums
   
 def maine():
