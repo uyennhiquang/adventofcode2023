@@ -15,8 +15,6 @@ def calc_points(s):
     return 0
   return points
 
-  # return winning_nums
-  
 def maine():
   sum = 0
   with open("input") as f:
