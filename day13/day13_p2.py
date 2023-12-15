@@ -58,7 +58,6 @@ def pattern_to_num(pattern):
               break
             if left_line[i] != right_line[i]:
               smudges += 1
-
         # else:
         left_index -= 1
         right_index += 1
